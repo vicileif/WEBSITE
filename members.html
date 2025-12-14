@@ -2,7 +2,6 @@
 <!--
 	Editorial by HTML5 UP
 	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 <head>
@@ -10,80 +9,52 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+
 	<style>
-		/* Sidebar links */
-		#sidebar {
-			left: 0 !important;
-			right: auto !important;
+		/* Members layout */
+		.members article {
+			display: flex;
+			align-items: flex-start;
+			gap: 1.5rem;
+			margin-bottom: 3rem;
 		}
-		#main {
-			margin-left: 300px; /* Platz für Sidebar */
+
+		.members article .image {
+			flex: 0 0 180px;
+		}
+
+		.members article .image img {
+			width: 180px;
+			height: 180px;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+
+		.members article .content {
+			flex: 1;
+		}
+
+		@media screen and (max-width: 736px) {
+			.members article {
+				flex-direction: column;
+			}
+
+			.members article .image img {
+				width: 100%;
+				height: auto;
+			}
 		}
 	</style>
 </head>
+
 <body class="is-preload">
 
-<!-- Wrapper -->
 <div id="wrapper">
-
-	<!-- Sidebar -->
-	<div id="sidebar">
-		<div class="inner">
-
-			<!-- Search -->
-			<section id="search" class="alt">
-				<form method="post" action="#">
-					<input type="text" name="query" id="query" placeholder="Search" />
-				</form>
-			</section>
-
-			<!-- Menu -->
-			<nav id="menu">
-				<header class="major">
-					<h2>Menu</h2>
-				</header>
-				<ul>
-					<li><a href="index.html">Homepage</a></li>
-					<li><a href="scientificbackground.html">Scientific Background</a></li>
-					<li><a href="members.html">Members</a></li>
-					<li><a href="publications.html">Publications</a></li>
-					<li><a href="projects.html">Ongoing Projects</a></li>
-					<li><a href="press.html">Press</a></li>
-					<li><a href="news.html">News</a></li>
-					<li><a href="events.html">Events</a></li>
-				</ul>
-			</nav>
-
-			<!-- Section -->
-			<section>
-				<header class="major">
-					<h2>Get in touch</h2>
-				</header>
-				<p>Do not hesitate to contact us if you want to seek more information or would like to get in touch for other reasons.</p>
-				<ul class="contact">
-					<li class="icon solid fa-envelope"><a href="#">euremail@mail.de</a></li>
-					<li class="icon solid fa-phone">(000) 000-0000</li>
-					<li class="icon solid fa-home">Adresse, Postleitzahl Stadt</li>
-				</ul>
-			</section>
-
-			<!-- Footer -->
-			<footer id="footer">
-				<p class="copyright">
-					&copy; Untitled. All rights reserved.
-					Demo Images: <a href="https://unsplash.com">Unsplash</a>.
-					Design: <a href="https://html5up.net">HTML5 UP</a>.
-				</p>
-			</footer>
-
-		</div>
-	</div>
 
 	<!-- Main -->
 	<div id="main">
 		<div class="inner">
 
-			<!-- Section -->
 			<section>
 				<header class="major">
 					<h2>Members</h2>
@@ -92,64 +63,29 @@
 				<div class="members">
 
 					<article>
-						<a href="#" class="image"><img src="images/Johanna-Loechner-Bild.png" alt="" /></a>
-						<h3>Prof. Dr. Johanna Löchner</h3>
-						<p>Prof. Löchner works at the Friedrich-Alexander University Erlangen–Nuremberg in the Department of Psychology. Her research focuses on the early detection and prevention of mental disorders in children and adolescents using digital technologies. In addition, she is interested in risk and resilience factors in the development of mental disorders, as well as stress management—for example, constructive ways of dealing with negative emotions. Based on this work, Prof. Löchner develops digital applications such as apps and mobile assessment tools within multidisciplinary teams, aiming to capture symptoms in everyday life and provide low-threshold prevention of mental health problems.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">More</a></li>
-						</ul>
+						<span class="image">
+							<img src="images/Johanna-Loechner-Bild.png" alt="" />
+						</span>
+						<div class="content">
+							<h3>Prof. Dr. Johanna Löchner</h3>
+							<p>Prof. Löchner works at the Friedrich-Alexander University Erlangen–Nuremberg in the Department of Psychology. Her research focuses on the early detection and prevention of mental disorders in children and adolescents using digital technologies. In addition, she is interested in risk and resilience factors in the development of mental disorders, as well as stress management—for example, constructive ways of dealing with negative emotions. Based on this work, Prof. Löchner develops digital applications such as apps and mobile assessment tools within multidisciplinary teams, aiming to capture symptoms in everyday life and provide low-threshold prevention of mental health problems.</p>
+						</div>
 					</article>
 
 					<article>
-						<a href="#" class="image"><img src="images/Hennemann.jpg" alt="" /></a>
-						<h3>Dr. Severin Hennemann</h3>
-						<p>Dr. Hennemann is a licensed psychological psychotherapist in cognitive-behavioral therapy. Hennemann works at Johannes Gutenberg University Mainz in the Department of Clinical Psychology, Psychotherapy and Experimental Psychopathology. His research focuses on digital health, including internet-based cognitive behavioral therapy (iCBT), chatbots, and factors influencing the acceptance and adoption of e-mental-health interventions. Further interests include ambulatory assessment, digital diagnostics, and psychotherapy process research. For his research, he received the Early Career Award of the International Society of Behavioral Medicine (ISBM) in 2023 and the Young Investigator Award of the European Association of Psychosomatic Medicine (EAPM) in 2022.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">More</a></li>
-						</ul>
+						<span class="image">
+							<img src="images/Hennemann.jpg" alt="" />
+						</span>
+						<div class="content">
+							<h3>Dr. Severin Hennemann</h3>
+							<p>Dr. Hennemann is a licensed psychological psychotherapist in cognitive-behavioral therapy. Hennemann works at Johannes Gutenberg University Mainz in the Department of Clinical Psychology, Psychotherapy and Experimental Psychopathology. His research focuses on digital health, including internet-based cognitive behavioral therapy (iCBT), chatbots, and factors influencing the acceptance and adoption of e-mental-health interventions. Further interests include ambulatory assessment, digital diagnostics, and psychotherapy process research.</p>
+						</div>
 					</article>
 
 					<article>
-						<a href="#" class="image"><img src="images/Bjoern-Schuller.jpg" alt="" /></a>
-						<h3>Prof. Dr. Björn Schuller</h3>
-						<p>Dr. Schuller is affiliated with the Technical University of Munich (Medicine & Health), Imperial College London (Computing), audEERING GmbH, the Harbin Institute of Technology, and Tianjin Normal University. He works in the fields of artificial intelligence, machine and deep learning, and audio, language, bio, and multimedia signal processing. His research spans health informatics, digital health, mHealth, and affective computing, with additional interests in computer ethics.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">More</a></li>
-						</ul>
-					</article>
-
-					<article>
-						<a href="#" class="image"><img src="images/Andreas-Triantafyllopoulos.jpg.webp.jpeg" alt="" /></a>
-						<h3>M.Sc. Andreas Triantafyllopoulos</h3>
-						<p>Triantafyllopoulos is a research assistant at the University of Tübingen.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">More</a></li>
-						</ul>
-					</article>
-
-					<article>
-						<a href="#" class="image"><img src="images/lasse-sander.jpg" alt="" /></a>
-						<h3>Dr. Lasse B. Sander</h3>
-						<p> Dr. Sander is currently working as a group leader at the Institute of Medical Psychology and Medical Sociology at the Medical Faculty of the University of Freiburg, Germany. His main research interests are the digitalization of psychotherapeutic processes, prevention of depression and suicide and smart sensing.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">More</a></li>
-						</ul>
-					</article>
-
-				</div>
-			</section>
-
-		</div>
-	</div>
-
-</div>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
-</body>
-</html>
+						<span class="image">
+							<img src="images/Bjoern-Schuller.jpg" alt="" />
+						</span>
+						<div class="content">
+							<h3>Prof. Dr. Björn Schuller</h3>
+							<p>Dr. Schuller is affiliated with the Technical University of Munich (Medicine & Health), Imperial College London (Computing), audEERING GmbH, the Harbin Insti
