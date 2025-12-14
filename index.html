@@ -7,153 +7,55 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
-        /* Mitglieder-Bilder auf gleiche Größe bringen */
-        .posts article .image img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px; /* optional, abgerundete Ecken */
-        }
-
-        /* Flexbox für Bild und Text nebeneinander */
-        .posts article {
+        /* Members layout */
+        .members article {
             display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
+            align-items: flex-start; /* Text oben ausrichten */
+            gap: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0; /* dezente Trennlinie */
             margin-bottom: 2rem;
         }
 
-        .posts article .content {
+        .members article:last-child {
+            border-bottom: none; /* letzte Linie entfernen */
+            margin-bottom: 0;
+        }
+
+        .members article .image {
+            flex: 0 0 180px;
+        }
+
+        .members article .image img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .members article .content {
             flex: 1;
         }
 
-        /* Responsive Anpassung für kleine Bildschirme */
         @media screen and (max-width: 736px) {
-            .posts article {
+            .members article {
                 flex-direction: column;
-                align-items: center;
-                text-align: center;
+                gap: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #e0e0e0;
             }
 
-            .posts article .image img {
+            .members article .image img {
                 width: 100%;
                 height: auto;
             }
         }
     </style>
 </head>
+
 <body class="is-preload">
 
-<!-- Wrapper -->
 <div id="wrapper">
-
-    <!-- Main -->
-    <div id="main">
-        <div class="inner">
-
-            <!-- Header -->
-            <header id="header">
-                <a href="index.html" class="logo"><strong>MENTALLM<sup>RN</sup></strong> Mental Health LLM Research Network</a>
-                <ul class="icons">
-                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                    <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-                </ul>
-            </header>
-
-            <!-- Banner -->
-            <section id="banner">
-                <div class="content">
-                    <header>
-                        <h1>MENTALLM<sup>RN</sup></h1>
-                        <p>Mental Health Large Language Model Research Network</p>
-                    </header>
-                    <p>The MENTALLM<sup>RN</sup> is a scientic network of researchers united by their shared interest in large language models and their potential for advancing mental health research. Through interdisciplinary collaboration, we develop new methods, exchange scientific findings, and jointly deepen the understanding of these systems. Our aim is to open up innovative perspectives and sustainably advance research in this rapidly evolving field.</p>
-                    <ul class="actions">
-                        <li><a href="#" class="button big">Learn More</a></li>
-                    </ul>
-                </div>
-                <span class="image object">
-                    <img src="images/pic10.jpg" alt="" />
-                </span>
-            </section>
-
-            <!-- Scientific Background / About -->
-            <section>
-                <header class="major">
-                    <h2>Scientific Background oder erst noch sowas wie About Us</h2>
-                </header>
-                <div class="features">
-                    <article>
-                        <h3>...</h3>
-                        <p>Hier vielleicht eine Kurzfassung mit Motivation zur Gründung und Zielen und dann link learn more mit Quellen (dann kommt man da hin, wo man über die sidebar auch hinkommt).</p>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Members -->
-            <section>
-                <header class="major">
-                    <h2>Members</h2>
-                </header>
-                <div class="posts">
-                    <article>
-                        <a href="#" class="image"><img src="images/Johanna-Loechner-Bild.png" alt="" /></a>
-                        <div class="content">
-                            <h3>Prof. Dr. Johanna Löchner</h3>
-                            <p>Prof. Löchner works at the Friedrich-Alexander University Erlangen–Nuremberg in the Department of Psychology. Her research focuses on the early detection and prevention of mental disorders in children and adolescents using digital technologies. In addition, she is interested in risk and resilience factors in the development of mental disorders, as well as stress management—for example, constructive ways of dealing with negative emotions. Based on this work, Prof. Löchner develops digital applications such as apps and mobile assessment tools within multidisciplinary teams, aiming to capture symptoms in everyday life and provide low-threshold prevention of mental health problems.</p>
-                            <ul class="actions">
-                                <li><a href="#" class="button">More</a></li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article>
-                        <a href="#" class="image"><img src="images/Hennemann.jpg" alt="" /></a>
-                        <div class="content">
-                            <h3>Dr. Severin Hennemann</h3>
-                            <p>Dr. Hennemann is a licensed psychological psychotherapist in cognitive-behavioral therapy. Hennemann works at Johannes Gutenberg University Mainz in the Department of Clinical Psychology, Psychotherapy and Experimental Psychopathology. His research focuses on digital health, including internet-based cognitive behavioral therapy (iCBT), chatbots, and factors influencing the acceptance and adoption of e-mental-health interventions. Further interests include ambulatory assessment, digital diagnostics, and psychotherapy process research.</p>
-                            <ul class="actions">
-                                <li><a href="#" class="button">More</a></li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article>
-                        <a href="#" class="image"><img src="images/Björn-Schuller-neu.png" alt="" /></a>
-                        <div class="content">
-                            <h3>Prof. Dr. Björn Schuller</h3>
-                            <p>Dr. Schuller is affiliated with the Technical University of Munich (Medicine & Health), Imperial College London (Computing), audEERING GmbH, the Harbin Institute of Technology, and Tianjin Normal University. He works in the fields of artificial intelligence, machine and deep learning, and audio, language, bio, and multimedia signal processing.</p>
-                            <ul class="actions">
-                                <li><a href="#" class="button">More</a></li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article>
-                        <a href="#" class="image"><img src="images/Andreas-Triantafyllopoulos.jpg.webp.jpeg" alt="" /></a>
-                        <div class="content">
-                            <h3>M.Sc. Andreas Triantafyllopoulos</h3>
-                            <p>Triantafyllopoulos is a research assistant at the University of Tübingen.</p>
-                            <ul class="actions">
-                                <li><a href="#" class="button">More</a></li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article>
-                        <a href="#" class="image"><img src="images/lasse-sander-neu.png" alt="" /></a>
-                        <div class="content">
-                            <h3>Dr. Lasse B. Sander</h3>
-                            <p> Dr. Sander is currently working as a group leader at the Institute of Medical Psychology and Medical Sociology at the Medical Faculty of the University of Freiburg, Germany. His main research interests are the digitalization of psychotherapeutic processes, prevention of depression and suicide and smart sensing.</p>
-                            <ul class="actions">
-                                <li><a href="#" class="button">More</a></li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-        </div>
-    </div>
 
     <!-- Sidebar -->
     <div id="sidebar">
@@ -183,7 +85,7 @@
                 </ul>
             </nav>
 
-            <!-- Get in Touch -->
+            <!-- Get in Touch Section -->
             <section>
                 <header class="major">
                     <h2>Get in touch</h2>
@@ -199,14 +101,96 @@
             <!-- Footer -->
             <footer id="footer">
                 <p class="copyright">
-                    &copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.
+                    &copy; Untitled. All rights reserved.
+                    Demo Images: <a href="https://unsplash.com">Unsplash</a>.
+                    Design: <a href="https://html5up.net">HTML5 UP</a>.
                 </p>
             </footer>
 
-        </div>
-    </div>
+        </div> <!-- .inner -->
+    </div> <!-- #sidebar -->
 
-</div> <!-- End Wrapper -->
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo"><strong>MENTALLM<sup>RN</sup></strong> Mental Health LLM Research Network</a>
+                <ul class="icons">
+                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Members Section -->
+            <section>
+                <header class="major">
+                    <h2>Members</h2>
+                </header>
+
+                <div class="members">
+
+                    <article>
+                        <span class="image">
+                            <img src="images/Johanna-Loechner-Bild.png" alt="" />
+                        </span>
+                        <div class="content">
+                            <h3>Prof. Dr. Johanna Löchner</h3>
+                            <p>Prof. Löchner works at the Friedrich-Alexander University Erlangen–Nuremberg in the Department of Psychology. Her research focuses on the early detection and prevention of mental disorders in children and adolescents using digital technologies. In addition, she is interested in risk and resilience factors in the development of mental disorders, as well as stress management—for example, constructive ways of dealing with negative emotions. Based on this work, Prof. Löchner develops digital applications such as apps and mobile assessment tools within multidisciplinary teams, aiming to capture symptoms in everyday life and provide low-threshold prevention of mental health problems.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span class="image">
+                            <img src="images/Hennemann.jpg" alt="" />
+                        </span>
+                        <div class="content">
+                            <h3>Dr. Severin Hennemann</h3>
+                            <p>Dr. Hennemann is a licensed psychological psychotherapist in cognitive-behavioral therapy. Hennemann works at Johannes Gutenberg University Mainz in the Department of Clinical Psychology, Psychotherapy and Experimental Psychopathology. His research focuses on digital health, including internet-based cognitive behavioral therapy (iCBT), chatbots, and factors influencing the acceptance and adoption of e-mental-health interventions. Further interests include ambulatory assessment, digital diagnostics, and psychotherapy process research.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span class="image">
+                            <img src="images/Björn-Schuller-neu.png" alt="" />
+                        </span>
+                        <div class="content">
+                            <h3>Prof. Dr. Björn Schuller</h3>
+                            <p>Dr. Schuller is affiliated with the Technical University of Munich (Medicine & Health), Imperial College London (Computing), audEERING GmbH, the Harbin Institute of Technology, and Tianjin Normal University. He works in the fields of artificial intelligence, machine and deep learning, and audio, language, bio, and multimedia signal processing.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span class="image">
+                            <img src="images/Andreas-Triantafyllopoulos.jpg.webp.jpeg" alt="" />
+                        </span>
+                        <div class="content">
+                            <h3>M.Sc. Andreas Triantafyllopoulos</h3>
+                            <p>Triantafyllopoulos is a research assistant at the University of Tübingen.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span class="image">
+                            <img src="images/lasse-sander-neu.png" alt="" />
+                        </span>
+                        <div class="content">
+                            <h3>Dr. Lasse B. Sander</h3>
+                            <p>Dr. Sander is currently working as a group leader at the Institute of Medical Psychology and Medical Sociology at the Medical Faculty of the University of Freiburg, Germany.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
+    </div> <!-- End #main -->
+
+</div> <!-- End #wrapper -->
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
@@ -217,4 +201,3 @@
 
 </body>
 </html>
-
