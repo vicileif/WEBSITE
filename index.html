@@ -10,16 +10,15 @@
         /* Members layout */
         .members article {
             display: flex;
-            align-items: flex-start; /* Text oben ausrichten */
-            gap: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e0e0e0; /* dezente Trennlinie */
+            align-items: flex-start;
+            gap: 1.5rem;
             margin-bottom: 2rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 2rem;
         }
 
         .members article:last-child {
-            border-bottom: none; /* letzte Linie entfernen */
-            margin-bottom: 0;
+            border-bottom: none;
         }
 
         .members article .image {
@@ -40,19 +39,58 @@
         @media screen and (max-width: 736px) {
             .members article {
                 flex-direction: column;
-                gap: 1rem;
-                padding-bottom: 1rem;
-                border-bottom: 1px solid #e0e0e0;
+                align-items: center;
             }
 
             .members article .image img {
                 width: 100%;
                 height: auto;
             }
+
+            .members article .content {
+                text-align: center;
+            }
+        }
+
+        /* Banner layout */
+        #banner {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        #banner .content {
+            flex: 1 1 60%;
+            min-width: 300px;
+        }
+
+        #banner .image {
+            flex: 1 1 35%;
+            min-width: 200px;
+        }
+
+        #banner .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Ensure sidebar stays left */
+        #wrapper {
+            display: flex;
+        }
+
+        #sidebar {
+            order: -1;
+        }
+
+        #main {
+            flex: 1;
         }
     </style>
 </head>
-
 <body class="is-preload">
 
 <div id="wrapper">
@@ -85,7 +123,7 @@
                 </ul>
             </nav>
 
-            <!-- Get in Touch Section -->
+            <!-- Get in Touch -->
             <section>
                 <header class="major">
                     <h2>Get in touch</h2>
@@ -101,14 +139,12 @@
             <!-- Footer -->
             <footer id="footer">
                 <p class="copyright">
-                    &copy; Untitled. All rights reserved.
-                    Demo Images: <a href="https://unsplash.com">Unsplash</a>.
-                    Design: <a href="https://html5up.net">HTML5 UP</a>.
+                    &copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.
                 </p>
             </footer>
 
-        </div> <!-- .inner -->
-    </div> <!-- #sidebar -->
+        </div>
+    </div> <!-- End Sidebar -->
 
     <!-- Main -->
     <div id="main">
@@ -126,12 +162,41 @@
                 </ul>
             </header>
 
-            <!-- Members Section -->
+            <!-- Banner -->
+            <section id="banner">
+                <div class="content">
+                    <header>
+                        <h1>MENTALLM<sup>RN</sup></h1>
+                        <p>Mental Health Large Language Model Research Network</p>
+                    </header>
+                    <p>The MENTALLM<sup>RN</sup> is a scientific network of researchers united by their shared interest in large language models and their potential for advancing mental health research. Through interdisciplinary collaboration, we develop new methods, exchange scientific findings, and jointly deepen the understanding of these systems. Our aim is to open up innovative perspectives and sustainably advance research in this rapidly evolving field.</p>
+                    <ul class="actions">
+                        <li><a href="#" class="button big">Learn More</a></li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="images/pic10.jpg" alt="" />
+                </div>
+            </section>
+
+            <!-- Scientific Background / About -->
+            <section>
+                <header class="major">
+                    <h2>Scientific Background oder erst noch sowas wie About Us</h2>
+                </header>
+                <div class="features">
+                    <article>
+                        <h3>...</h3>
+                        <p>Hier vielleicht eine Kurzfassung mit Motivation zur Gründung und Zielen und dann link learn more mit Quellen (dann kommt man da hin, wo man über die sidebar auch hinkommt).</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Members -->
             <section>
                 <header class="major">
                     <h2>Members</h2>
                 </header>
-
                 <div class="members">
 
                     <article>
@@ -188,9 +253,9 @@
             </section>
 
         </div>
-    </div> <!-- End #main -->
+    </div> <!-- End Main -->
 
-</div> <!-- End #wrapper -->
+</div> <!-- End Wrapper -->
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
