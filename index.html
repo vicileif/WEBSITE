@@ -5,6 +5,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+        /* Mitglieder-Bilder auf gleiche Größe bringen */
+        .posts article .image img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px; /* optional, abgerundete Ecken */
+        }
+
+        /* Flexbox für Bild und Text nebeneinander */
+        .posts article {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .posts article .content {
+            flex: 1;
+        }
+
+        /* Responsive Anpassung für kleine Bildschirme */
+        @media screen and (max-width: 736px) {
+            .posts article {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .posts article .image img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -34,8 +70,7 @@
                         <h1>MENTALLM<sup>RN</sup></h1>
                         <p>Mental Health Large Language Model Research Network</p>
                     </header>
-                    <p>The MENTALLM<sup>RN</sup> is a scientic network of researchers united by their shared interest in large language models and their potential for advancing mental health research. Through interdisciplinary collaboration, we develop new methods, exchange scientific findings, and jointly deepen the understanding of these systems. Our aim is to open up innovative perspectives and sustainably advance research in this rapidly evolving field. 
-                    Rechts ein Bild eines LLM?</p>
+                    <p>The MENTALLM<sup>RN</sup> is a scientic network of researchers united by their shared interest in large language models and their potential for advancing mental health research. Through interdisciplinary collaboration, we develop new methods, exchange scientific findings, and jointly deepen the understanding of these systems. Our aim is to open up innovative perspectives and sustainably advance research in this rapidly evolving field.</p>
                     <ul class="actions">
                         <li><a href="#" class="button big">Learn More</a></li>
                     </ul>
@@ -66,44 +101,53 @@
                 <div class="posts">
                     <article>
                         <a href="#" class="image"><img src="images/Johanna-Loechner-Bild.png" alt="" /></a>
-                        <h3>Prof. Dr. Johanna Löchner</h3>
-                        <p>Bei den Members müssen die Bilder noch auf das selbe Format angepasst werden. Die Texte müssen überarbeitet/ergänzt werden und von Lasse habe ich kein geeignetes Bild zum Kopieren gefunden. Unter den Links könnte man jeweils die Uni-Website verlinken, wo die Member tätig sind.
-                        Prof. Löchner works at the Friedrich-Alexander University Erlangen–Nuremberg in the Department of Psychology. Her research focuses on the early detection and prevention of mental disorders in children and adolescents using digital technologies. In addition, she is interested in risk and resilience factors in the development of mental disorders, as well as stress management—for example, constructive ways of dealing with negative emotions. Based on this work, Prof. Löchner develops digital applications such as apps and mobile assessment tools within multidisciplinary teams, aiming to capture symptoms in everyday life and provide low-threshold prevention of mental health problems.</p>
-                        <ul class="actions">
-                            <li><a href="#" class="button">More</a></li>
-                        </ul>
+                        <div class="content">
+                            <h3>Prof. Dr. Johanna Löchner</h3>
+                            <p>Prof. Löchner works at the Friedrich-Alexander University Erlangen–Nuremberg in the Department of Psychology. Her research focuses on the early detection and prevention of mental disorders in children and adolescents using digital technologies. In addition, she is interested in risk and resilience factors in the development of mental disorders, as well as stress management—for example, constructive ways of dealing with negative emotions. Based on this work, Prof. Löchner develops digital applications such as apps and mobile assessment tools within multidisciplinary teams, aiming to capture symptoms in everyday life and provide low-threshold prevention of mental health problems.</p>
+                            <ul class="actions">
+                                <li><a href="#" class="button">More</a></li>
+                            </ul>
+                        </div>
                     </article>
                     <article>
                         <a href="#" class="image"><img src="images/Hennemann.jpg" alt="" /></a>
-                        <h3>Dr. Severin Hennemann</h3>
-                        <p>Dr. Hennemann is a licensed psychological psychotherapist in cognitive-behavioral therapy. Hennemann works at Johannes Gutenberg University Mainz in the Department of Clinical Psychology, Psychotherapy and Experimental Psychopathology. His research focuses on digital health, including internet-based cognitive behavioral therapy (iCBT), chatbots, and factors influencing the acceptance and adoption of e-mental-health interventions. Further interests include ambulatory assessment, digital diagnostics, and psychotherapy process research. For his research, he received the Early Career Award of the International Society of Behavioral Medicine (ISBM) in 2023 and the Young Investigator Award of the European Association of Psychosomatic Medicine (EAPM) in 2022.</p>
-                        <ul class="actions">
-                            <li><a href="#" class="button">More</a></li>
-                        </ul>
+                        <div class="content">
+                            <h3>Dr. Severin Hennemann</h3>
+                            <p>Dr. Hennemann is a licensed psychological psychotherapist in cognitive-behavioral therapy. Hennemann works at Johannes Gutenberg University Mainz in the Department of Clinical Psychology, Psychotherapy and Experimental Psychopathology. His research focuses on digital health, including internet-based cognitive behavioral therapy (iCBT), chatbots, and factors influencing the acceptance and adoption of e-mental-health interventions. Further interests include ambulatory assessment, digital diagnostics, and psychotherapy process research.</p>
+                            <ul class="actions">
+                                <li><a href="#" class="button">More</a></li>
+                            </ul>
+                        </div>
                     </article>
                     <article>
                         <a href="#" class="image"><img src="images/Bjoern-Schuller.jpg" alt="" /></a>
-                        <h3>Prof. Dr. Björn Schuller</h3>
-                        <p>Dr. Schuller is affiliated with the Technical University of Munich (Medicine & Health), Imperial College London (Computing), audEERING GmbH, the Harbin Institute of Technology, and Tianjin Normal University. He works in the fields of artificial intelligence, machine and deep learning, and audio, language, bio, and multimedia signal processing. His research spans health informatics, digital health, mHealth, and affective computing, with additional interests in computer ethics.</p>
-                        <ul class="actions">
-                            <li><a href="#" class="button">More</a></li>
-                        </ul>
+                        <div class="content">
+                            <h3>Prof. Dr. Björn Schuller</h3>
+                            <p>Dr. Schuller is affiliated with the Technical University of Munich (Medicine & Health), Imperial College London (Computing), audEERING GmbH, the Harbin Institute of Technology, and Tianjin Normal University. He works in the fields of artificial intelligence, machine and deep learning, and audio, language, bio, and multimedia signal processing.</p>
+                            <ul class="actions">
+                                <li><a href="#" class="button">More</a></li>
+                            </ul>
+                        </div>
                     </article>
                     <article>
                         <a href="#" class="image"><img src="images/Andreas-Triantafyllopoulos.jpg.webp.jpeg" alt="" /></a>
-                        <h3>M.Sc. Andreas Triantafyllopoulos</h3>
-                        <p>Triantafyllopoulos is a research assistant at the University of Tübingen.</p>
-                        <ul class="actions">
-                            <li><a href="#" class="button">More</a></li>
-                        </ul>
+                        <div class="content">
+                            <h3>M.Sc. Andreas Triantafyllopoulos</h3>
+                            <p>Triantafyllopoulos is a research assistant at the University of Tübingen.</p>
+                            <ul class="actions">
+                                <li><a href="#" class="button">More</a></li>
+                            </ul>
+                        </div>
                     </article>
                     <article>
                         <a href="#" class="image"><img src="images/lasse-sander.jpg" alt="" /></a>
-                        <h3>Dr. Lasse B. Sander</h3>
-                        <p> Dr. Sander is currently working as a group leader at the Institute of Medical Psychology and Medical Sociology at the Medical Faculty of the University of Freiburg, Germany. His main research interests are the digitalization of psychotherapeutic processes, prevention of depression and suicide and smart sensing.</p>
-                        <ul class="actions">
-                            <li><a href="#" class="button">More</a></li>
-                        </ul>
+                        <div class="content">
+                            <h3>Dr. Lasse B. Sander</h3>
+                            <p> Dr. Sander is currently working as a group leader at the Institute of Medical Psychology and Medical Sociology at the Medical Faculty of the University of Freiburg, Germany. His main research interests are the digitalization of psychotherapeutic processes, prevention of depression and suicide and smart sensing.</p>
+                            <ul class="actions">
+                                <li><a href="#" class="button">More</a></li>
+                            </ul>
+                        </div>
                     </article>
                 </div>
             </section>
