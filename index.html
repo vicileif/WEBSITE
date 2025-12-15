@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
-        /* Sidebar links (wie Original – keine Main-Margins!) */
+        /* Sidebar links – wie Original */
         #sidebar {
             left: 0;
             right: auto;
         }
 
         /* ==============================
-           BANNER – FINAL FIX
+           BANNER – FINAL & KORREKT
            ============================== */
 
         #banner {
@@ -22,7 +22,7 @@
             align-items: flex-start;
             gap: 3rem;
             margin-bottom: 3rem;
-            flex-wrap: nowrap; /* <<< entscheidend */
+            flex-wrap: nowrap;
         }
 
         #banner .content {
@@ -30,7 +30,7 @@
         }
 
         #banner .image {
-            flex: 0 0 320px; /* feste Breite, passt in HTML5-UP Container */
+            flex: 0 0 320px;
         }
 
         #banner .image img {
@@ -127,12 +127,11 @@
                     </header>
 
                     <p>
-                        The MENTALLM<sup>RN</sup> is a scientific network of researchers united by their
-                        shared interest in large language models and their potential for advancing
-                        mental health research. Through interdisciplinary collaboration, we develop
-                        new methods, exchange scientific findings, and jointly deepen the understanding
-                        of these systems. Our aim is to open up innovative perspectives and sustainably
-                        advance research in this rapidly evolving field.
+                        The MENTALLM<sup>RN</sup> is a scientific network of researchers united by their shared
+                        interest in large language models and their potential for advancing mental health research.
+                        Through interdisciplinary collaboration, we develop new methods, exchange scientific
+                        findings, and jointly deepen the understanding of these systems. Our aim is to open up
+                        innovative perspectives and sustainably advance research in this rapidly evolving field.
                     </p>
 
                     <ul class="actions">
@@ -148,11 +147,11 @@
             <!-- Scientific Background -->
             <section>
                 <header class="major">
-                    <h2>Scientific Background oder About Us</h2>
+                    <h2>Scientific Background oder erst noch sowas wie About Us</h2>
                 </header>
                 <p>
                     Hier vielleicht eine Kurzfassung mit Motivation zur Gründung und Zielen und dann
-                    Link „Learn more“ mit Quellen.
+                    ein Learn-more-Link.
                 </p>
             </section>
 
@@ -170,7 +169,11 @@
                         </span>
                         <div class="content">
                             <h3>Prof. Dr. Johanna Löchner</h3>
-                            <p>Prof. Löchner works at FAU Erlangen–Nuremberg. Her research focuses on digital prevention and early detection of mental disorders.</p>
+                            <p>
+                                Prof. Löchner works at the Friedrich-Alexander University Erlangen–Nuremberg.
+                                Her research focuses on early detection and prevention of mental disorders
+                                using digital technologies.
+                            </p>
                         </div>
                     </article>
 
@@ -180,7 +183,10 @@
                         </span>
                         <div class="content">
                             <h3>Dr. Severin Hennemann</h3>
-                            <p>Licensed CBT psychotherapist and researcher in digital mental health at JGU Mainz.</p>
+                            <p>
+                                Licensed CBT psychotherapist and researcher at Johannes Gutenberg University Mainz.
+                                Focus on digital mental health and e-mental-health interventions.
+                            </p>
                         </div>
                     </article>
 
@@ -190,7 +196,35 @@
                         </span>
                         <div class="content">
                             <h3>Prof. Dr. Björn Schuller</h3>
-                            <p>Professor at TUM & Imperial College London, expert in AI, audio and language processing.</p>
+                            <p>
+                                Professor at TU Munich & Imperial College London, expert in AI, audio,
+                                language and multimodal signal processing.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span class="image">
+                            <img src="images/Andreas-Triantafyllopoulos.jpg.webp.jpeg" alt="" />
+                        </span>
+                        <div class="content">
+                            <h3>M.Sc. Andreas Triantafyllopoulos</h3>
+                            <p>
+                                Research assistant at the University of Tübingen.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span class="image">
+                            <img src="images/lasse-sander-neu.png" alt="" />
+                        </span>
+                        <div class="content">
+                            <h3>Dr. Lasse B. Sander</h3>
+                            <p>
+                                Group leader at the Institute of Medical Psychology and Medical Sociology,
+                                University of Freiburg.
+                            </p>
                         </div>
                     </article>
 
@@ -204,6 +238,14 @@
     <div id="sidebar">
         <div class="inner">
 
+            <!-- Search -->
+            <section id="search" class="alt">
+                <form method="post" action="#">
+                    <input type="text" name="query" id="query" placeholder="Search" />
+                </form>
+            </section>
+
+            <!-- Menu -->
             <nav id="menu">
                 <header class="major">
                     <h2>Menu</h2>
@@ -214,14 +256,31 @@
                     <li><a href="members.html">Members</a></li>
                     <li><a href="publications.html">Publications</a></li>
                     <li><a href="projects.html">Ongoing Projects</a></li>
+                    <li><a href="press.html">Press</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="events.html">Events</a></li>
                 </ul>
             </nav>
 
+            <!-- Contact -->
+            <section>
+                <header class="major">
+                    <h2>Get in touch</h2>
+                </header>
+                <p>
+                    Do not hesitate to contact us if you want to seek more information or would like to get in touch.
+                </p>
+                <ul class="contact">
+                    <li class="icon solid fa-envelope"><a href="#">euremail@mail.de</a></li>
+                    <li class="icon solid fa-phone">(000) 000-0000</li>
+                    <li class="icon solid fa-home">Adresse, Postleitzahl Stadt</li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
             <footer id="footer">
                 <p class="copyright">
-                    &copy; MENTALLM<sup>RN</sup>. Design: HTML5 UP.
+                    &copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.
                 </p>
             </footer>
 
