@@ -7,38 +7,48 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
-        /* Sidebar links (ohne Main-Margins!) */
+        /* Sidebar links (wie Original – keine Main-Margins!) */
         #sidebar {
             left: 0;
             right: auto;
         }
 
         /* ==============================
-           BANNER
+           BANNER – FINAL FIX
            ============================== */
 
         #banner {
             display: flex;
-            flex-wrap: wrap;
             align-items: flex-start;
-            gap: 2rem;
+            gap: 3rem;
             margin-bottom: 3rem;
+            flex-wrap: nowrap; /* <<< entscheidend */
         }
 
         #banner .content {
-            flex: 1 1 60%;
-            min-width: 300px;
+            flex: 1;
         }
 
         #banner .image {
-            flex: 1 1 35%;
-            min-width: 200px;
+            flex: 0 0 320px; /* feste Breite, passt in HTML5-UP Container */
         }
 
         #banner .image img {
             width: 100%;
             height: auto;
             border-radius: 8px;
+        }
+
+        /* Mobile */
+        @media screen and (max-width: 980px) {
+            #banner {
+                flex-direction: column;
+            }
+
+            #banner .image {
+                width: 100%;
+                flex: none;
+            }
         }
 
         /* ==============================
@@ -91,7 +101,7 @@
 
 <div id="wrapper">
 
-    <!-- MAIN (comes first) -->
+    <!-- MAIN -->
     <div id="main">
         <div class="inner">
 
@@ -101,54 +111,49 @@
                     <strong>MENTALLM<sup>RN</sup></strong> Mental Health LLM Research Network
                 </a>
                 <ul class="icons">
-                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                    <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                    <li><a href="#" class="icon brands fa-twitter"></a></li>
+                    <li><a href="#" class="icon brands fa-facebook-f"></a></li>
+                    <li><a href="#" class="icon brands fa-instagram"></a></li>
+                    <li><a href="#" class="icon brands fa-medium-m"></a></li>
                 </ul>
             </header>
 
             <!-- Banner -->
-           <section id="banner">
-    <div class="content">
-        <header>
-            <h1>MENTALLM<sup>RN</sup></h1>
-            <p>Mental Health Large Language Model Research Network</p>
-        </header>
+            <section id="banner">
+                <div class="content">
+                    <header>
+                        <h1>MENTALLM<sup>RN</sup></h1>
+                        <p>Mental Health Large Language Model Research Network</p>
+                    </header>
 
-        <p>
-            The MENTALLM<sup>RN</sup> is a scientific network of researchers united by their shared
-            interest in large language models and their potential for advancing mental health research.
-            Through interdisciplinary collaboration, we develop new methods, exchange scientific
-            findings, and jointly deepen the understanding of these systems. Our aim is to open up
-            innovative perspectives and sustainably advance research in this rapidly evolving field.
-        </p>
+                    <p>
+                        The MENTALLM<sup>RN</sup> is a scientific network of researchers united by their
+                        shared interest in large language models and their potential for advancing
+                        mental health research. Through interdisciplinary collaboration, we develop
+                        new methods, exchange scientific findings, and jointly deepen the understanding
+                        of these systems. Our aim is to open up innovative perspectives and sustainably
+                        advance research in this rapidly evolving field.
+                    </p>
 
-        <ul class="actions">
-            <li><a href="#" class="button big">Learn More</a></li>
-        </ul>
-    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button big">Learn More</a></li>
+                    </ul>
+                </div>
 
-    <div class="image">
-        <img src="images/pic10.jpg" alt="" />
-    </div>
-</section>
-
+                <div class="image">
+                    <img src="images/pic10.jpg" alt="" />
+                </div>
+            </section>
 
             <!-- Scientific Background -->
             <section>
                 <header class="major">
-                    <h2>Scientific Background oder erst noch sowas wie About Us</h2>
+                    <h2>Scientific Background oder About Us</h2>
                 </header>
-                <div class="features">
-                    <article>
-                        <h3>...</h3>
-                        <p>
-                            Hier vielleicht eine Kurzfassung mit Motivation zur Gründung und Zielen und dann link learn more mit Quellen (dann kommt man da hin, wo man über die sidebar auch hinkommt).
-                        </p>
-                    </article>
-                </div>
+                <p>
+                    Hier vielleicht eine Kurzfassung mit Motivation zur Gründung und Zielen und dann
+                    Link „Learn more“ mit Quellen.
+                </p>
             </section>
 
             <!-- Members -->
@@ -156,6 +161,7 @@
                 <header class="major">
                     <h2>Members</h2>
                 </header>
+
                 <div class="members">
 
                     <article>
@@ -164,9 +170,7 @@
                         </span>
                         <div class="content">
                             <h3>Prof. Dr. Johanna Löchner</h3>
-                            <p>
-                                Prof. Löchner works at the Friedrich-Alexander University Erlangen–Nuremberg in the Department of Psychology. Her research focuses on the early detection and prevention of mental disorders in children and adolescents using digital technologies. In addition, she is interested in risk and resilience factors in the development of mental disorders, as well as stress management—for example, constructive ways of dealing with negative emotions. Based on this work, Prof. Löchner develops digital applications such as apps and mobile assessment tools within multidisciplinary teams, aiming to capture symptoms in everyday life and provide low-threshold prevention of mental health problems.
-                            </p>
+                            <p>Prof. Löchner works at FAU Erlangen–Nuremberg. Her research focuses on digital prevention and early detection of mental disorders.</p>
                         </div>
                     </article>
 
@@ -176,9 +180,7 @@
                         </span>
                         <div class="content">
                             <h3>Dr. Severin Hennemann</h3>
-                            <p>
-                                Dr. Hennemann is a licensed psychological psychotherapist in cognitive-behavioral therapy. He works at Johannes Gutenberg University Mainz in the Department of Clinical Psychology, Psychotherapy and Experimental Psychopathology. His research focuses on digital health, including internet-based cognitive behavioral therapy (iCBT), chatbots, and factors influencing the acceptance and adoption of e-mental-health interventions. Further interests include ambulatory assessment, digital diagnostics, and psychotherapy process research.
-                            </p>
+                            <p>Licensed CBT psychotherapist and researcher in digital mental health at JGU Mainz.</p>
                         </div>
                     </article>
 
@@ -188,33 +190,7 @@
                         </span>
                         <div class="content">
                             <h3>Prof. Dr. Björn Schuller</h3>
-                            <p>
-                                Prof. Schuller is affiliated with the Technical University of Munich (Medicine & Health), Imperial College London (Computing), audEERING GmbH, the Harbin Institute of Technology, and Tianjin Normal University. He works in the fields of artificial intelligence, machine and deep learning, and audio, language, bio, and multimedia signal processing.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article>
-                        <span class="image">
-                            <img src="images/Andreas-Triantafyllopoulos.jpg.webp.jpeg" alt="" />
-                        </span>
-                        <div class="content">
-                            <h3>M.Sc. Andreas Triantafyllopoulos</h3>
-                            <p>
-                                Triantafyllopoulos is a research assistant at the University of Tübingen.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article>
-                        <span class="image">
-                            <img src="images/lasse-sander-neu.png" alt="" />
-                        </span>
-                        <div class="content">
-                            <h3>Dr. Lasse B. Sander</h3>
-                            <p>
-                                Dr. Sander is currently working as a group leader at the Institute of Medical Psychology and Medical Sociology at the Medical Faculty of the University of Freiburg, Germany.
-                            </p>
+                            <p>Professor at TUM & Imperial College London, expert in AI, audio and language processing.</p>
                         </div>
                     </article>
 
@@ -224,18 +200,10 @@
         </div>
     </div>
 
-    <!-- SIDEBAR (comes last) -->
+    <!-- SIDEBAR -->
     <div id="sidebar">
         <div class="inner">
 
-            <!-- Search -->
-            <section id="search" class="alt">
-                <form method="post" action="#">
-                    <input type="text" name="query" id="query" placeholder="Search" />
-                </form>
-            </section>
-
-            <!-- Menu -->
             <nav id="menu">
                 <header class="major">
                     <h2>Menu</h2>
@@ -246,33 +214,14 @@
                     <li><a href="members.html">Members</a></li>
                     <li><a href="publications.html">Publications</a></li>
                     <li><a href="projects.html">Ongoing Projects</a></li>
-                    <li><a href="press.html">Press</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="events.html">Events</a></li>
                 </ul>
             </nav>
 
-            <!-- Contact -->
-            <section>
-                <header class="major">
-                    <h2>Get in touch</h2>
-                </header>
-                <p>
-                    Do not hesitate to contact us if you want to seek more information or would like to get in touch for other reasons.
-                </p>
-                <ul class="contact">
-                    <li class="icon solid fa-envelope"><a href="#">euremail@mail.de</a></li>
-                    <li class="icon solid fa-phone">(000) 000-0000</li>
-                    <li class="icon solid fa-home">Adresse, Postleitzahl Stadt</li>
-                </ul>
-            </section>
-
-            <!-- Footer -->
             <footer id="footer">
                 <p class="copyright">
-                    &copy; Untitled. All rights reserved. Demo Images:
-                    <a href="https://unsplash.com">Unsplash</a>.
-                    Design: <a href="https://html5up.net">HTML5 UP</a>.
+                    &copy; MENTALLM<sup>RN</sup>. Design: HTML5 UP.
                 </p>
             </footer>
 
@@ -281,7 +230,6 @@
 
 </div>
 
-<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
@@ -290,5 +238,3 @@
 
 </body>
 </html>
-
-
