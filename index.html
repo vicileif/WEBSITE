@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <title>MENTALLM<sup>RN</sup></title>
     <meta charset="utf-8" />
@@ -7,52 +7,30 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
-        /* Members layout */
-        .members article {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 2rem;
+        /* ==============================
+           SIDEBAR LINKS (HTML5 UP FIX)
+           ============================== */
+
+        #sidebar {
+            left: 0;
+            right: auto;
         }
 
-        .members article:last-child {
-            border-bottom: none;
+        #main {
+            margin-left: 26em; /* sidebar width */
+            margin-right: 0;
         }
 
-        .members article .image {
-            flex: 0 0 180px;
-        }
-
-        .members article .image img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .members article .content {
-            flex: 1;
-        }
-
-        @media screen and (max-width: 736px) {
-            .members article {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .members article .image img {
-                width: 100%;
-                height: auto;
-            }
-
-            .members article .content {
-                text-align: center;
+        @media screen and (max-width: 1280px) {
+            #main {
+                margin-left: 0;
             }
         }
 
-        /* Banner layout */
+        /* ==============================
+           BANNER LAYOUT
+           ============================== */
+
         #banner {
             display: flex;
             align-items: center;
@@ -77,20 +55,52 @@
             border-radius: 8px;
         }
 
-        /* Ensure sidebar stays left */
-        #wrapper {
+        /* ==============================
+           MEMBERS LAYOUT
+           ============================== */
+
+        .members article {
             display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #ccc;
         }
 
-        #sidebar {
-            order: -1;
+        .members article:last-child {
+            border-bottom: none;
         }
 
-        #main {
+        .members .image {
+            flex: 0 0 180px;
+        }
+
+        .members .image img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .members .content {
             flex: 1;
+        }
+
+        @media screen and (max-width: 736px) {
+            .members article {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .members .image img {
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
+
 <body class="is-preload">
 
 <div id="wrapper">
@@ -123,7 +133,7 @@
                 </ul>
             </nav>
 
-            <!-- Get in Touch -->
+            <!-- Contact -->
             <section>
                 <header class="major">
                     <h2>Get in touch</h2>
@@ -144,7 +154,7 @@
             </footer>
 
         </div>
-    </div> <!-- End Sidebar -->
+    </div>
 
     <!-- Main -->
     <div id="main">
@@ -179,7 +189,7 @@
                 </div>
             </section>
 
-            <!-- Scientific Background / About -->
+            <!-- Scientific Background -->
             <section>
                 <header class="major">
                     <h2>Scientific Background oder erst noch sowas wie About Us</h2>
@@ -200,9 +210,7 @@
                 <div class="members">
 
                     <article>
-                        <span class="image">
-                            <img src="images/Johanna-Loechner-Bild.png" alt="" />
-                        </span>
+                        <span class="image"><img src="images/Johanna-Loechner-Bild.png" alt="" /></span>
                         <div class="content">
                             <h3>Prof. Dr. Johanna Löchner</h3>
                             <p>Prof. Löchner works at the Friedrich-Alexander University Erlangen–Nuremberg in the Department of Psychology. Her research focuses on the early detection and prevention of mental disorders in children and adolescents using digital technologies. In addition, she is interested in risk and resilience factors in the development of mental disorders, as well as stress management—for example, constructive ways of dealing with negative emotions. Based on this work, Prof. Löchner develops digital applications such as apps and mobile assessment tools within multidisciplinary teams, aiming to capture symptoms in everyday life and provide low-threshold prevention of mental health problems.</p>
@@ -210,9 +218,7 @@
                     </article>
 
                     <article>
-                        <span class="image">
-                            <img src="images/Hennemann.jpg" alt="" />
-                        </span>
+                        <span class="image"><img src="images/Hennemann.jpg" alt="" /></span>
                         <div class="content">
                             <h3>Dr. Severin Hennemann</h3>
                             <p>Dr. Hennemann is a licensed psychological psychotherapist in cognitive-behavioral therapy. Hennemann works at Johannes Gutenberg University Mainz in the Department of Clinical Psychology, Psychotherapy and Experimental Psychopathology. His research focuses on digital health, including internet-based cognitive behavioral therapy (iCBT), chatbots, and factors influencing the acceptance and adoption of e-mental-health interventions. Further interests include ambulatory assessment, digital diagnostics, and psychotherapy process research.</p>
@@ -220,9 +226,7 @@
                     </article>
 
                     <article>
-                        <span class="image">
-                            <img src="images/Björn-Schuller-neu.png" alt="" />
-                        </span>
+                        <span class="image"><img src="images/Björn-Schuller-neu.png" alt="" /></span>
                         <div class="content">
                             <h3>Prof. Dr. Björn Schuller</h3>
                             <p>Dr. Schuller is affiliated with the Technical University of Munich (Medicine & Health), Imperial College London (Computing), audEERING GmbH, the Harbin Institute of Technology, and Tianjin Normal University. He works in the fields of artificial intelligence, machine and deep learning, and audio, language, bio, and multimedia signal processing.</p>
@@ -230,9 +234,7 @@
                     </article>
 
                     <article>
-                        <span class="image">
-                            <img src="images/Andreas-Triantafyllopoulos.jpg.webp.jpeg" alt="" />
-                        </span>
+                        <span class="image"><img src="images/Andreas-Triantafyllopoulos.jpg.webp.jpeg" alt="" /></span>
                         <div class="content">
                             <h3>M.Sc. Andreas Triantafyllopoulos</h3>
                             <p>Triantafyllopoulos is a research assistant at the University of Tübingen.</p>
@@ -240,9 +242,7 @@
                     </article>
 
                     <article>
-                        <span class="image">
-                            <img src="images/lasse-sander-neu.png" alt="" />
-                        </span>
+                        <span class="image"><img src="images/lasse-sander-neu.png" alt="" /></span>
                         <div class="content">
                             <h3>Dr. Lasse B. Sander</h3>
                             <p>Dr. Sander is currently working as a group leader at the Institute of Medical Psychology and Medical Sociology at the Medical Faculty of the University of Freiburg, Germany.</p>
@@ -253,9 +253,9 @@
             </section>
 
         </div>
-    </div> <!-- End Main -->
+    </div>
 
-</div> <!-- End Wrapper -->
+</div>
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
