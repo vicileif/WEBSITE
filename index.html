@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
-        /* ==============================
-           SIDEBAR LINKS (HTML5 UP FIX)
-           ============================== */
+      
 
         #sidebar {
             left: 0;
@@ -17,7 +15,7 @@
         }
 
         #main {
-            margin-left: 26em; /* sidebar width */
+            margin-left: 26em;
             margin-right: 0;
         }
 
@@ -28,14 +26,14 @@
         }
 
         /* ==============================
-           BANNER LAYOUT
+           BANNER
            ============================== */
 
         #banner {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             gap: 2rem;
-            flex-wrap: wrap;
             margin-bottom: 3rem;
         }
 
@@ -56,14 +54,14 @@
         }
 
         /* ==============================
-           MEMBERS LAYOUT
+           MEMBERS
            ============================== */
 
         .members article {
             display: flex;
             gap: 1.5rem;
-            margin-bottom: 2rem;
             padding-bottom: 2rem;
+            margin-bottom: 2rem;
             border-bottom: 1px solid #ccc;
         }
 
@@ -89,8 +87,8 @@
         @media screen and (max-width: 736px) {
             .members article {
                 flex-direction: column;
-                align-items: center;
                 text-align: center;
+                align-items: center;
             }
 
             .members .image img {
@@ -105,58 +103,7 @@
 
 <div id="wrapper">
 
-    <!-- Sidebar -->
-    <div id="sidebar">
-        <div class="inner">
-
-            <!-- Search -->
-            <section id="search" class="alt">
-                <form method="post" action="#">
-                    <input type="text" name="query" id="query" placeholder="Search" />
-                </form>
-            </section>
-
-            <!-- Menu -->
-            <nav id="menu">
-                <header class="major">
-                    <h2>Menu</h2>
-                </header>
-                <ul>
-                    <li><a href="index.html">Homepage</a></li>
-                    <li><a href="scientificbackground.html">Scientific Background</a></li>
-                    <li><a href="members.html">Members</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="projects.html">Ongoing Projects</a></li>
-                    <li><a href="press.html">Press</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="events.html">Events</a></li>
-                </ul>
-            </nav>
-
-            <!-- Contact -->
-            <section>
-                <header class="major">
-                    <h2>Get in touch</h2>
-                </header>
-                <p>Do not hesitate to contact us if you want to seek more information or would like to get in touch for other reasons.</p>
-                <ul class="contact">
-                    <li class="icon solid fa-envelope"><a href="#">euremail@mail.de</a></li>
-                    <li class="icon solid fa-phone">(000) 000-0000</li>
-                    <li class="icon solid fa-home">Adresse, Postleitzahl Stadt</li>
-                </ul>
-            </section>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <p class="copyright">
-                    &copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.
-                </p>
-            </footer>
-
-        </div>
-    </div>
-
-    <!-- Main -->
+    <!-- MAIN (comes first!) -->
     <div id="main">
         <div class="inner">
 
@@ -251,6 +198,57 @@
 
                 </div>
             </section>
+
+        </div>
+    </div>
+
+    <!-- SIDEBAR (comes last!) -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Search -->
+            <section id="search" class="alt">
+                <form method="post" action="#">
+                    <input type="text" name="query" id="query" placeholder="Search" />
+                </form>
+            </section>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="scientificbackground.html">Scientific Background</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="projects.html">Ongoing Projects</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+
+            <!-- Contact -->
+            <section>
+                <header class="major">
+                    <h2>Get in touch</h2>
+                </header>
+                <p>Do not hesitate to contact us if you want to seek more information or would like to get in touch for other reasons.</p>
+                <ul class="contact">
+                    <li class="icon solid fa-envelope"><a href="#">euremail@mail.de</a></li>
+                    <li class="icon solid fa-phone">(000) 000-0000</li>
+                    <li class="icon solid fa-home">Adresse, Postleitzahl Stadt</li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">
+                    &copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.
+                </p>
+            </footer>
 
         </div>
     </div>
